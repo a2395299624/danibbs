@@ -1,0 +1,44 @@
+{% extends "cms/cms_base.html" %}
+{% block head %}
+    <style>
+        .table {
+            width: 30%;
+            font-size: 16px;
+        }
+
+        .table-bordered, .table-bordered tbody tr td {
+            border: 2px solid #d7d7d7;
+        }
+    </style>
+{% endblock %}
+
+{% block page_title %}
+    <div><h1><i class="fa fa-user-o"></i> 个人信息</h1></div>
+{% endblock %}
+
+{% block page_content %}
+    {% set user=g.cms_user %}
+    <table class="table table-bordered">
+        <tr>
+            <td>用户名：</td>
+            <td>{{ user.username }}</td>
+        </tr>
+        <tr>
+            <td>邮箱：</td>
+            <td>{{ user.email }}</td>
+        </tr>
+        <tr>
+            <td>级别：</td>
+            <td>{{ user.role[0].name }}</td>
+        </tr>
+        <tr>
+            <td>功能：</td>
+            <td>{{ user.role[0].desc }}</td>
+        </tr>
+        <tr>
+            <td>加入时间：</td>
+            <td>{{ user.join_time }}</td>
+        </tr>
+
+    </table>
+{% endblock %}

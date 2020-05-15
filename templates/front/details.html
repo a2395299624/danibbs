@@ -1,0 +1,120 @@
+{% extends 'front/base.html' %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block head %}
+    <script type="text/javascript" src="{{ static("ueditor/ueditor.config.js") }}"></script>
+    <script type="text/javascript" src="{{ static("ueditor/ueditor.all.js") }}"></script>
+    <script type="text/javascript" src="{{ static("front/js/details.js") }}"></script>
+    <link rel="stylesheet" href="{{ static('front/css/details.css') }}">
+{% endblock %}
+
+{% block content %}
+
+    <div class="main-container">
+        <div class="author-container">
+            <div class="author-intro">
+                <img class="img-circle"
+                     src="{{ post.author.avatar or "http://q9xc69071.bkt.clouddn.com/o_1e7t80ok9itjt115r5f6b1po08.png" }}"
+                     alt="">
+                <div class="user-info">
+                    <span>{{ post.author.username }}</span>
+                    <p>加入时间:{{ post.author.register_time|time_simple }}</p>
+                </div>
+                <div class="data-info">
+                    <dl class="text-center">
+                        <dt>积分</dt>
+                        <dd>0</dd>
+                    </dl>
+                    <dl class="text-center">
+                        <dt>关注</dt>
+                        <dd>0</dd>
+                    </dl>
+                    <dl class="text-center">
+                        <dt>获赞</dt>
+                        <dd>0</dd>
+                    </dl>
+                    <dl class="text-center">
+                        <dt>帖子</dt>
+                        <dd>{{ post.author.posts|length }}</dd>
+                    </dl>
+                </div>
+                <div class="item-rank"></div>
+                <div class="options">
+                    <button class="btn btn-default">Ta的主页</button>
+                    <button class="btn btn-danger">关注</button>
+                </div>
+            </div>
+        </div>
+        <div class="post-container">
+            <div class="post">
+                <div class="article-header-box">
+                    <h1 class="title">{{ post.title }}</h1>
+                    <div class="article-info-box">
+                        <span>&nbsp;&nbsp;{{ post.author.username }}</span>
+                        <span>{{ post.create_time }}</span>
+                        <span style="float: right">主题 — {{ post.plate.name }}</span>
+                        <img src="https://csdnimg.cn/release/phoenix/template/new_img/articleRead.png" alt="">
+                        <span>{{post.read_num}}</span>
+                        <img src="https://csdnimg.cn/release/phoenix/template/new_img/commentWhite.png" alt="">
+                        <span>{{ post.comments|length }}</span>
+                    </div>
+                </div>
+                <article class="post-content" post-id="{{ post.id }}">{{ post.content|safe }}</article>
+            </div>
+            <div class="comment-container">
+                <h2>全部评论</h2>
+                <div class="comment-list">
+                    {% for commont in post.comments %}
+                        <ul>
+                            <li>
+                                <a href="">
+                                    <img class="img-circle"
+                                         src="{{ commont.author.avator or "http://q9xc69071.bkt.clouddn.com/o_1e7t80ok9itjt115r5f6b1po08.png" }}"
+                                         alt="">
+                                </a>
+                                <span> {{ commont.author.username }}：</span>
+                                <div class="comment-info">
+                                    <span>{{ commont.content|safe }}
+                                        <p style="overflow: hidden">
+                                        <span style="color: #999aaa;float: right;margin-left: 15px;cursor: pointer">
+                                            <img style="width: 16px;vertical-align: middle;"
+                                                 src="https://blog.csdn.net/static_files/template/new_img/commentHeart.png?new"></span>
+                                        <span style="color: #999aaa;float: right;margin-left: 15px;cursor: pointer">回复</span>
+                                        <span style="color: #999aaa;float: right">{{ commont.create_time|time_filter }}</span>
+                                        </p>
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                    {% endfor %}
+                    {% if not post.comments %}
+                        <p style="margin-top: 10px">暂无回复</p>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="add-comment-container">
+                <script id="container" name="content" type="text/plain"></script>
+                <div class="pop-error">
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td class="er-l">&nbsp;</td>
+                            <td class="er-c">
+                                <div class="er-text"><span></span></div>
+                            </td>
+                            <td class="er-r">&nbsp;</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div style="text-align: right; padding: 10px 5px ">
+                    <button id="comment-btn" class="btn btn-info">发表评论</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="recommend-container"></div>
+
+    </div>
+{% endblock %}

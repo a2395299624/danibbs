@@ -1,0 +1,51 @@
+{% extends "cms/cms_base.html" %}
+{% block head %}
+    <script type="text/javascript" src="{{ static('cms/js/post.js') }}"></script>
+    <script src="{{ static('common/js/shake.js') }}"></script>
+    <style>
+        .card {
+            width: 1200px;
+        }
+
+        .table-bordered td button {
+            margin-left: 10px;
+        }
+    </style>
+{% endblock %}
+{% block page_title %}
+    <div><h1><i class="fa fa-pencil-square-o"></i> 帖子管理</h1></div>
+{% endblock %}
+
+{% block page_content %}
+    <div class="card">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>标题</th>
+                <th>发布时间</th>
+                <th style="width: 100px">评论数</th>
+                <th style="width: 100px">板块</th>
+                <th style="width: 100px">作者</th>
+                <th style="width: 250px">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for post in posts %}
+                <tr data-id="{{ post.id }}">
+                    <td title="{{ post.title }}">{{ post.title }}</td>
+                    <td>{{ post.create_time }}</td>
+                    <td>{{ post.comment|length }}</td>
+                    <td>{{ post.plate.name }}</td>
+                    <td>{{ post.author.username }}</td>
+                    <td>
+                        <button class="btn btn-default btn-xs highlight-post-btn">{% if post.top %}取消置顶{% else %}置顶{% endif %}</button>
+                        <button class="btn btn-warning btn-xs recommend-post-btn">{% if post.recommend %}取消推荐{% else %}加推{% endif %}</button>
+                        <button class="btn btn-danger btn-xs delete-post-btn">删除</button>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <div class="pag"> {{ pagination.links }}</div>
+    </div>
+{% endblock %}

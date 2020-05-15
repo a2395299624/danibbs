@@ -1,0 +1,194 @@
+.main-container {
+    display: flex;
+    justify-content: center;
+    padding: 8px 12px 0 8px;
+    background-color: #f5f6f7;
+    min-height: 870px;
+    width: 1903px;
+}
+
+.author-container, .recommend-container {
+    width: 300px;
+}
+
+.post-container {
+    width: 1000px;
+    margin-bottom: 30px;
+}
+
+.post {
+    background-color: #fff;
+    padding: 0 24px 16px;
+    min-height: 500px;
+}
+
+.article-header-box {
+    padding-top: 24px;
+}
+
+.article-header-box .title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.article-info-box {
+    font-size: 14px;
+    color: #999aaa;
+    background: #f7f7fc;
+    font-family: 'Microsoft YaHei', 'SF Pro Display', Roboto, Noto, Arial, 'PingFang SC', sans-serif;
+    line-height: 32px;
+}
+
+.article-info-box > span {
+    margin-right: 12px;
+}
+
+.article-info-box > img {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.post-content {
+    margin-top: 16px;
+}
+
+.post-content > p > img {
+    max-width: 100%;
+}
+
+.author-intro {
+    padding: 16px 16px 6px;
+    background-color: #fff;
+    margin-right: 10px;
+    overflow: hidden;
+}
+
+.author-intro > img {
+    width: 48px;
+}
+
+.user-info {
+    display: inline-block;
+    line-height: 25px;
+}
+
+.data-info {
+    padding: 9px 10px;
+    font-family: 'Microsoft YaHei', 'SF Pro Display', Roboto, Noto, Arial, 'PingFang SC', sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+
+.data-info > dl {
+    display: inline-block;
+}
+
+.data-info > dl > dt {
+    color: #4a4d52;
+}
+
+.data-info > dl > dd {
+    color: #999aaa;
+}
+
+.item-rank {
+    height: 1px;
+    background-color: #f5f6f7;
+    width: 268px;
+}
+
+.options {
+    padding: 8px 16px 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.comment-container {
+    margin-top: 8px;
+    background-color: #fff;
+    padding: 8px 24px 16px;
+}
+
+.add-comment-container {
+    margin-top: 10px;
+    background-color: #fff;
+    padding: 16px 24px 16px;
+}
+
+.pop-error {
+    position: absolute;
+    z-index: 999;
+    left: 800px;
+    top: 350px;
+    display: none;
+}
+
+.pop-error .er-l {
+    background: url(https://bbs.3dmgame.com/static/image/common/popuptext_bg.gif) no-repeat 0 0;
+}
+
+.pop-error .er-c {
+    width: 200px;
+    background: url(https://bbs.3dmgame.com/static/image/common/popuptext_bg.gif) repeat-x 0 -56px;
+}
+
+.pop-error .er-r {
+    background: url(https://bbs.3dmgame.com/static/image/common/popuptext_bg.gif) no-repeat -30px 0;
+}
+
+.pop-error .er-text {
+    white-space: nowrap;
+    text-align: center;
+    width: auto;
+    background: url(https://bbs.3dmgame.com/static/image/common/popuptext_bg.gif) no-repeat 50% -112px;
+}
+
+.pop-error .er-text > span {
+    margin-right: 10px;
+    font-size: 12px;
+    font-style: normal;
+    color: #FFF;
+    font-weight: 400;
+}
+
+.er-l, .er-c, .er-text, .er-r {
+    width: 29px;
+    height: 56px;
+    line-height: 56px;
+}
+
+.comment-list > ul {
+    border-bottom: 1px solid #f7f7fc;
+    padding-top: 16px;
+}
+
+.comment-list > ul > li > a {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.comment-list > ul > li > a > img {
+    width: 24px;
+}
+
+.comment-info {
+    margin: 8px 0;
+    position: relative;
+    left: 30px;
+    width: 95%;
+}
+
+.comment-info > span {
+    display: block;
+    overflow: hidden;
+}
+
+.comment-info > span > p {
+    word-wrap: break-word
+}
+.footer{
+    background-color: #fff;
+}

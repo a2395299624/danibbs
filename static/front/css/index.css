@@ -1,0 +1,225 @@
+a:hover, a:focus {
+    text-decoration: none;
+}
+
+.main-container {
+    width: 990px;
+    margin: 0 auto 100px;
+    padding-top: 50px;
+    overflow: hidden;
+    min-height: 610px;
+}
+
+.lg-container {
+    float: left;
+}
+
+.nav-container {
+    float: left;
+    margin-right: 20px;
+
+}
+
+.nav-container .list-group a {
+    text-align: center;
+}
+
+.nav-container .list-group-item.active {
+    background-color: #00a1d6;
+    border-color: #00a1d6;
+}
+
+.carousel-control.right, .carousel-control.left {
+    background-image: none;
+}
+
+.carousel-inner > .item > a > img {
+    height: 250px;
+    width: 687px;
+}
+
+ol.carousel-indicators {
+    margin-bottom: 0;
+}
+
+.carousel-indicators li {
+    width: 13px;
+    height: 13px;
+}
+
+.carousel-indicators .active {
+    width: 15px;
+    height: 15px;
+}
+
+@media screen and (min-width: 768px) {
+}
+
+.carousel-indicators {
+    bottom: 20px;
+}
+
+.post-container {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.post-header {
+    padding: 10px;
+}
+
+.post-header > ul {
+    overflow: hidden;
+}
+
+.post-header > ul > li {
+    text-decoration: none;
+    float: left;
+    text-align: center;
+}
+
+.post-header > ul > li > a:hover {
+    background-color: rgba(160, 160, 160, 0.3);
+}
+
+.post-header > ul > li > a {
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    display: block;
+    font-size: 15px;
+}
+
+.post-header .active > a {
+    background-color: rgba(160, 160, 160, 0.3);
+}
+
+.post-list > ul > li:hover {
+    background-color: #fafafa;
+}
+
+.post-list > ul > li {
+    padding: 18px 24px 13px;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.post-list .post-info {
+    overflow: hidden;
+}
+
+.post-list .post-info > p {
+    display: inline-block;
+}
+
+.post-list .post-info .post-author-avatar {
+    float: left;
+    margin-right: 5px;
+}
+
+.post-list .post-info .post-author-avatar > img {
+    width: 25px;
+
+}
+
+.post-list .post-info .name {
+    float: left;
+}
+
+.post-list .post-info .name a {
+    color: #3d3d3d;
+    line-height: 30px;
+}
+
+.post-list .post-info .name a:hover {
+    color: #157dcf;
+}
+
+.post-list .post-info .comment {
+    float: right;
+    color: #3399ea;
+}
+
+.post-list .post-info .read {
+    float: right;
+    color: #3399ea;
+
+}
+
+.post-list .post-text {
+    margin-bottom: 5px;
+    color: #8a8a8a;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 617px;
+}
+
+.post-list .post-title > a {
+    color: #3d3d3d;
+}
+
+.post-list .post-title {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 24px;
+    height: 24px;
+    margin-bottom: 8px;
+    overflow: hidden;
+    white-space: nowrap
+}
+
+.post-list .post-title .create-time {
+    float: right;
+    font-size: 14px;
+    color: #999aaa;
+}
+
+.post-list .post-title > a:hover {
+    color: #ca0c16;
+}
+
+.interval {
+    display: block;
+    float: left;
+    width: 1px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    margin-top: 4px;
+    margin-left: 8px;
+    margin-right: 8px
+}
+
+.pag {
+    text-align: center;
+}
+
+.pag > ul > li > a {
+    font-size: 16px;
+}
+
+.recommend {
+    display: inline-block;
+    width: 24px;
+    height: 23px;
+    border-radius: 4px;
+    border: 1px solid #ca0c16;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    color: #ca0c16;
+    line-height: 23px;
+    margin-right: 4px;
+}
+.top {
+    display: inline-block;
+    background-color: #00b7ee;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    color: #fff;
+    margin-right: 4px;
+    padding: 0 5px;
+}

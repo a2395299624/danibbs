@@ -1,0 +1,156 @@
+{% extends 'front/base.html' %}
+
+{% block title %}达尼论坛{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{{ static("front/css/index.css") }}">
+    <script src="{{ static("front/js/index.js") }}"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="main-container">
+
+        <div class="nav-container">
+            <div class="list-group">
+                {% if select_plate %}
+                    <a href="/" class="list-group-item">推荐</a>
+                {% else %}
+                    <a href="/" class="list-group-item active">推荐</a>
+                {% endif %}
+                {% for plate in plates %}
+                    {% if plate.id== select_plate %}
+                        <a href="{{ url_for("front.index",plate=plate.id) }}"
+                           class="list-group-item active">{{ plate.name }}</a>
+                    {% else %}
+                        <a href="{{ url_for("front.index",plate=plate.id) }}"
+                           class="list-group-item">{{ plate.name }}</a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        <div class="lg-container">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="2500">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    {% for banner in banners %}
+                        {% if loop.first %}
+                            <div class="item active">
+                        {% else %}
+                            <div class="item">
+                        {% endif %}
+                    <a href="{{ banner.url }}"><img src="{{ banner.image }}" alt=""></a>
+                    </div>
+                    {% endfor %}
+                    </div>
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button"
+                       data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button"
+                       data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    </a>
+                </div>
+                <div class="post-container">
+                    <div class="post-header">
+                        <ul>
+                            {% if select_sort=='new' %}
+                                <li class="active"><a href="{{ url_for('front.index',sort='new',plate=select_plate) }}">最新帖子</a>
+                                </li>
+                            {% else %}
+                                <li><a href="{{ url_for('front.index',sort='new',plate=select_plate) }}">最新帖子</a></li>
+                            {% endif %}
+
+                            {% if select_sort=='hot' %}
+                                <li class="active"><a href="{{ url_for('front.index',sort='hot',plate=select_plate) }}">热门帖子</a>
+                                </li>
+                            {% else %}
+                                <li><a href="{{ url_for('front.index',sort='hot',plate=select_plate) }}">热门帖子</a></li>
+                            {% endif %}
+
+                            {% if select_sort=='high' %}
+                                <li class="active">
+                                    <a href="{{ url_for('front.index',sort='like',plate=select_plate) }}">点赞最多</a>
+                                </li>
+                            {% else %}
+                                <li><a href="{{ url_for('front.index',sort='like',plate=select_plate) }}">点赞最多</a></li>
+                            {% endif %}
+
+                            {% if select_sort=='reply' %}
+                                <li class="active">
+                                    <a href="{{ url_for('front.index',sort='reply',plate=select_plate) }}">回复最多</a>
+                                </li>
+                            {% else %}
+                                <li><a href="{{ url_for('front.index',sort='reply',plate=select_plate) }}">回复最多</a></li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                    <div class="post-list">
+                        <ul>
+                            {% for post in posts_top %}
+                                <li>
+                                    <h2 class="post-title">
+                                        {% if post.top %}
+                                            <span class="top">置顶</span>
+                                        {% endif %}
+                                        {% if post.recommend %}
+                                            <span class="recommend">推</span>
+                                        {% endif %}
+                                        <a target="_blank"
+                                           href="{{ url_for('front.details',post_id=post.id) }}">{{ post.title }}</a>
+                                        <span class=create-time> {{ post.create_time|time_filter }}</span>
+                                    </h2>
+                                    <div class="post-text">{{ post.content|striptags }}</div>
+                                    <div class="post-info">
+                                        <dt class="post-author-avatar">
+                                            <img class="img-circle"
+                                                 src="{{ post.author.avatar or"http://q9xc69071.bkt.clouddn.com/o_1e7t80ok9itjt115r5f6b1po08.png" }}"
+                                                 alt="">
+                                        </dt>
+                                        <dd class="name"><a href="">{{ post.author.username }}</a></dd>
+                                        <dd class="comment"><i></i>评论:{{ post.comments|length }}
+                                            <div class="interval"></div>
+                                        </dd>
+                                        <dd class="read"><i></i>阅读:{{ post.read_num }}</dd>
+                                    </div>
+                                </li>
+                            {% endfor %}
+
+                            {% for post in posts %}
+                                <li>
+                                    <h2 class="post-title">
+                                        {% if post.recommend %}
+                                            <span class="recommend">推</span>
+                                        {% endif %}
+                                        <a target="_blank"
+                                           href="{{ url_for('front.details',post_id=post.id) }}">{{ post.title }}</a>
+                                        <span class=create-time> {{ post.create_time|time_filter }}</span>
+                                    </h2>
+                                    <div class="post-text">{{ post.content|striptags }}</div>
+                                    <div class="post-info">
+                                        <dt class="post-author-avatar">
+                                            <img class="img-circle"
+                                                 src="{{ post.author.avatar or"http://q9xc69071.bkt.clouddn.com/o_1e7t80ok9itjt115r5f6b1po08.png" }}"
+                                                 alt="">
+                                        </dt>
+                                        <dd class="name"><a href="">{{ post.author.username }}</a></dd>
+                                        <dd class="comment"><i></i>评论:{{ post.comments|length }}
+                                            <div class="interval"></div>
+                                        </dd>
+                                        <dd class="read"><i></i>阅读:{{ post.read_num }}</dd>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                        <div class="pag"> {{ pagination.links }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'cms/cms_base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" type="text/css" href={{ (static('cms/css/resetemail.css')) }}>
+    <script src="{{ static('cms/js/resetemail.js') }}"></script>
+{% endblock %}
+
+{% block page_title %}
+    <div><h1><i class="fa fa-envelope-o"></i> 修改邮箱</h1></div>
+{% endblock %}
+
+{% block page_content %}
+    <form action="" method="post">
+        <div>
+            <div class="form-group">
+                <div class="input-group">
+                    <input name="email" type="email" class="form-control" placeholder="邮箱">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <input style="width: 299px" name="captcha" type="text" class="form-control" placeholder="邮箱验证码">
+                    <span  class=" input-group-addon disabled get-captcha">获取验证码</span>
+                </div>
+            </div>
+            <button id="submit" class="btn btn-info">确认提交</button>
+        </div>
+        </div>
+    </form>
+{% endblock %}

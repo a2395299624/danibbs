@@ -1,0 +1,93 @@
+{% extends 'front/base.html' %}
+
+{% block title %}达尼论坛-登录{% endblock %}
+
+{% block head %}
+    <script src="https://www.yunpian.com/static/official/js/libs/riddler-sdk-0.2.2.js"></script>
+    <style type="text/css">
+        .yp-riddler .yp-riddler-winbox {
+            margin: 280px auto 0 auto;
+        }
+
+        .yp-riddler .yp-riddler-slider-area .yp-riddler-slider-btn {
+            cursor: pointer;
+        }
+        .content{
+            min-height: 630px;
+        }
+    </style>
+    <script src="{{ static("front/js/login.js") }}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ static("front/css/login.css") }}">
+
+{% endblock %}
+
+{% block content %}
+    <div class="top-bg">
+        <img src="http://q9xc69071.bkt.clouddn.com/o_1e7t8323guv76sjo051umeo8.png" alt="">
+    </div>
+
+    <div class="content">
+        <div class="outer-box">
+            <div class="page-title">
+                <h2>登录</h2>
+            </div>
+            <div class="register-box">
+                <div class="type-tab">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active">
+                            <a href="#mobilelogin" aria-controls="home" role="tab" data-toggle="tab">手机登录</a>
+                        </li>
+                        <span>|</span>
+                        <li role="presentation">
+                            <a href="#namelogin" aria-controls="profile" role="tab" data-toggle="tab">昵称登录</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="mobilelogin">
+                        <div class="form-group">
+                            <input name="telephone" type="text" class="form-control" placeholder="填写常用手机号">
+                            <P class="error-message"></P>
+                        </div>
+                        <div class="form-group"></div>
+                        <div class="form-group">
+                            <input name="password" type="password" class="form-control password1"
+                                   placeholder="密码（6-16个字符组成，区分大小写）">
+                            <P class="error-message"></P>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="namelogin">
+                        <div class="form-group">
+                            <input name="username" type="text" class="form-control" placeholder="输入昵称">
+                            <P class="error-message"></P>
+                        </div>
+                        <div class="form-group"></div>
+                        <div class="form-group">
+                            <input name="password" type="password" class="form-control password2"
+                                   placeholder="密码（6-16个字符组成，区分大小写）">
+                            <P class="error-message"></P>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group form-error">
+                    <P></P>
+                </div>
+                <div class="form-group form-remember">
+                    <label class="remember">
+                        <input name="remember" type="checkbox" value="true"> 记住我
+                    </label>
+                    <a href="#" class="forget-password">忘记密码？</a>
+                </div>
+                <div class="form-group">
+                    <button id="signin" class="btn btn-warning btn-block" url-go="{{ url_go }}">登录</button>
+                    <a href="{{ url_for('front.register') }}">
+                        <button id="register" class="btn btn-default btn-block">注册</button>
+                    </a>
+                </div>
+                <div class="alert alert-success" role="alert" style="display: none">
+                    <span>验证成功</span>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

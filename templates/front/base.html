@@ -1,0 +1,387 @@
+{% from "common/macros.html" import static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="stylesheet" type="text/css" href="{{ static("common/css/bootstrap.min.css") }}">
+    <link rel="stylesheet" type="text/css" href="{{ static("common/css/sweetalert.css") }}">
+    <link rel="stylesheet" type="text/css"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="{{ static("common/js/jquery-2.1.4.min.js") }}"></script>
+    <script type="text/javascript" src="{{ static('common/js/bootstrap.min.js') }}"></script>
+    <script type="text/javascript" src="{{ static("common/js/ajax.js") }}"></script>
+    <script type="text/javascript" src="{{ static("common/js/sweetalert/sweetalert.min.js") }}"></script>
+    <script type="text/javascript" src="{{ static("common/js/sweetalert/alert.js") }}"></script>
+    <style type="text/css">
+        a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            vertical-align: baseline;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        .navbar {
+            margin: 0;
+            min-width: 1000px;
+        }
+
+        .navbar-form {
+            text-align: center;
+            display: block;
+        }
+
+        .search-bar {
+            height: 42px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+            background-color: #fff;
+        }
+
+        .search-bar .form-control {
+            width: 400px;
+            border: none;
+            display: inline;
+            box-shadow: none;
+            padding-right: 0;
+        }
+
+        .search-bar .form-control:focus {
+            border: none;
+            box-shadow: none;
+        }
+
+        .search-bar .btn {
+            display: inline;
+            width: 30px;
+            height: 40px;
+            background-color: #fff;
+        }
+
+        .search-bar .btn:hover {
+            color: #0e8df2;
+        }
+
+        .search-bar .btn:focus {
+            outline: none;
+            outline-offset: 0;
+            box-shadow: none;
+        }
+
+        .search {
+            border-color: #66afe9;
+            outline: 0;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+        }
+
+        .navbar-default .navbar-nav > .active > a {
+            border-bottom: red solid 3px;
+            color: #000000;
+        }
+
+        .navbar-default .navbar-nav > li > a {
+            padding: 15px 0 0 0;
+            margin: 5px 10px;
+            color: #000000;
+
+        }
+
+        .navbar-collapse {
+            font-size: 16px;
+        }
+
+        .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+            background-color: #f8f8f8;
+        }
+
+
+        .navbar-default .navbar-collapse .navbar-nav > li > a:hover {
+            border-bottom: red solid 3px;
+        }
+
+        .navbar-right {
+            margin-right: 120px;
+        }
+
+        .navbar-brand {
+            padding: 2px 10px;
+
+        }
+
+        .navbar-brand > img {
+            height: 50px;
+        }
+
+        .navbar-default .navbar-nav .publish > a {
+            display: inline-block;
+            height: 32px;
+            margin-top: 15px;
+            border-radius: 4px;
+            color: #fff;
+            background: #E33E33;
+            line-height: 5px;
+        }
+
+        .dropdown-menu > li:hover {
+            background-color: #f5f5f5;
+        }
+
+        .navbar-default .navbar-nav .publish > a > span {
+            font-weight: 500;
+            font-size: 15px;
+            margin: 0 10px;
+        }
+
+        .navbar-default .navbar-nav .publish > a:hover, .navbar-default .navbar-nav .publish > a:focus {
+            background-color: #E33E33;
+            color: #fff;
+        }
+
+        .nav > li > a > img {
+            max-width: 45px;
+        }
+
+        .navbar-default .navbar-nav .dropdown > a {
+            padding-top: 5px;
+        }
+
+        .dropdown-menu {
+            width: 280px;
+            border: none;
+
+        }
+
+        .dropdown-menu .avatar {
+            text-align: center;
+        }
+
+        .dropdown-menu .avatar a {
+            display: inline-block;
+        }
+
+        .dropdown-menu .avatar p {
+            color: #212121;
+            font-weight: 500;
+            font-size: 16px;
+            padding-top: 10px;
+        }
+
+        .dropdown-menu .avatar > a > img {
+            width: 80px;
+        }
+
+        .dropdown-menu > a {
+            color: #212121;
+            text-decoration: none;
+            display: block;
+            clear: both;
+            font-weight: normal;
+            line-height: 1.42857143;
+            white-space: nowrap;
+            padding: 10px 32px;
+            font: 15px -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei, sans-serif;
+        }
+
+        .dropdown-menu > a:hover {
+            text-decoration: none;
+            color: #262626;
+            background-color: #f5f5f5;
+        }
+
+        .dropdown-menu > a > div {
+            display: inline-block;
+        }
+
+        .navbar-right .dropdown-menu {
+            left: -150%;
+        }
+
+        .footer {
+            padding: 10px 0;
+            background-color: #f8f8f8;
+        }
+
+        .footer .container {
+            max-width:900px;
+            padding: 0;
+            margin: auto;
+        }
+
+        .row {
+            display: flex;
+            margin: 0;
+        }
+
+        .col-b {
+            flex-grow: 1;
+            flex-basis: 1%;
+            padding: 20px 10px;
+        }
+
+        .col-b h4{
+            margin:10px 0 5px 0;
+        }
+        .col-b a {
+            display: block;
+            color: #212121;
+        }
+        .col-b a:hover{
+            color:  #00A1D6;
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        $(function () {
+            let search_bar = $('input[name=search]');
+            let dropdown = $('.dropdown');
+            let dropdown_menu = $('.dropdown-menu');
+            if ($(window).width() < 1100) {
+                search_bar.css('width', 290)
+            }
+            $(window).resize(function () {
+                if ($(window).width() < 1100) {
+                    search_bar.css('width', 290)
+                }
+                if ($(window).width() > 1100) {
+                    search_bar.css('width', 400)
+                }
+            });
+            if (dropdown.attr('data-type-dropdown') !== undefined) {
+                dropdown.hover(function () {
+                        dropdown_menu.fadeIn()
+                    }, function () {
+                        dropdown_menu.hide()
+                    }
+                )
+            }
+            search_bar.focus(function () {
+                $('.search-bar').addClass("search")
+            });
+            search_bar.blur(function () {
+                $('.search-bar').removeClass("search")
+            })
+
+
+        })
+    </script>
+    {% block head %}
+    {% endblock %}
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+<div>
+    <nav class="navbar navbar-default">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="{{ url_for('front.index') }}"><img src="{{ static('common/img/logo.png') }}"
+                                                                             alt=""> </a>
+        </div>
+        <div class="nav navbar-collapse navbar-left">
+            <ul class="nav navbar-nav">
+                <li><a href="{{ url_for('front.index') }}">首页</a></li>
+                <li><a href="#">博客</a></li>
+            </ul>
+        </div>
+        <ul class="nav navbar-nav navbar-right ">
+            {% set user=g.front_user %}
+            {% if user %}
+                <li data-type-dropdown class="dropdown">
+                    <a href="#">
+                        <img class="img-circle"
+                             src="{{ user.avatar or "http://q9xc69071.bkt.clouddn.com/o_1e7t80ok9itjt115r5f6b1po08.png" }}"
+                             alt="">
+                    </a>
+                    <ul data-dropdown-menu class="dropdown-menu">
+                        <div class="avatar">
+                            <a href="#">
+                                <img class="img-circle"
+                                     src="{{ user.avatar or "http://q9xc69071.bkt.clouddn.com/o_1e7t80ok9itjt115r5f6b1po08.png" }}"
+                                     alt="">
+                            </a>
+                            <p>{{ user.username }}</p>
+                        </div>
+                        <li class="divider"></li>
+                        <a href="">
+                            <div>
+                                <i class="fa fa-user-o fa-lg "></i> 个人中心
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <i class="fa fa-edit fa-lg"></i> 我的帖子
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <i class="fa fa-heart-o fa-lg"></i> 我的关注
+                            </div>
+                        </a>
+                        <a href="">
+                            <div>
+                                <i class="fa fa-cog fa-lg"></i> 账号设置
+                            </div>
+                        </a>
+                        <li class="divider"></li>
+                        <a href="">
+                            <div><i class="fa fa-question-circle fa-lg"></i> 帮助</div>
+                        </a>
+                        <a href="{{ url_for("front.login",act='exit') }}">
+                            <div><i class="fa fa-sign-out fa-lg"></i> 退出</div>
+                        </a>
+                    </ul>
+                </li>
+            {% else %}
+                <li>
+                    <a target="_blank" href="{{ url_for('front.login') }}">登录</a>
+                </li>
+                <li>
+                    <a target="_blank" href="{{ url_for('front.register') }}">注册</a>
+                </li>
+            {% endif %}
+
+            <li class="publish"><a target="_blank" href="{{ url_for('front.post') }}" class=""><span>我要发帖</span>
+            </a></li>
+        </ul>
+        <form class="navbar-form">
+            <div class="search-bar">
+                <input name="search" type="text" class="form-control" placeholder="搜索.....">
+                <button class="btn " type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+            </div>
+        </form>
+    </nav>
+    {% block content %}
+    {% endblock %}
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-b">
+                    <h4>技术支持</h4>
+                    <a href="https://dormousehole.readthedocs.io/en/latest/" target="_blank"> Flask </a>
+                    <a href="https://v3.bootcss.com/" target="_blank"> Bootstrap </a>
+                </div>
+                <div class="col-b">
+                    <h4>开发</h4>
+                    <a href="" target="_blank"> github </a>
+                    <a href="http://wpa.qq.com/msgrd?v=3&uin=2395299624&site=qq&menu=yes" target="_blank"> QQ </a>
+                    <a href="mailto:2395299624@qq.com" target="_blank"> 开发者邮箱 </a>
+                </div>
+                  <div class="col-b">
+                    <h4>应用</h4>
+                    <a href="javascript:"> 关于达尼 </a>
+                    <a href="javascript:"> 相关网站 </a>
+                </div>
+                  <div class="col-b">
+                    <h4>资源</h4>
+                    <a href="javascript:">隐私策略</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+
+</html>
+

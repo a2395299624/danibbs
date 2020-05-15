@@ -1,0 +1,103 @@
+{% extends 'front/base.html' %}
+
+{% block title %}发表帖子{% endblock %}
+
+{% block head %}
+    <script type="text/javascript" src="{{ static("ueditor/ueditor.config.js") }}"></script>
+    <script type="text/javascript" src="{{ static("ueditor/ueditor.all.js") }}"></script>
+    <script type="text/javascript" src="{{ static("front/js/post.js") }}"></script>
+    <style type="text/css">
+        .editor {
+            width: 1800px;
+            margin: 0 auto;
+            padding-top: 100px;
+            min-height: 710px;
+        }
+
+        .pop-error {
+            position: fixed;
+            z-index: 999;
+            left: 822px;
+            top: 350px;
+            display: none;
+        }
+
+        .pop-error .er-l {
+            background: url(https://bbs.3dmgame.com/static/image/common/popuptext_bg.gif) no-repeat 0 0;
+        }
+
+        .pop-error .er-c {
+            width: 200px;
+            background: url(https://bbs.3dmgame.com/static/image/common/popuptext_bg.gif) repeat-x 0 -56px;
+        }
+
+        .pop-error .er-r {
+            background: url(https://bbs.3dmgame.com/static/image/common/popuptext_bg.gif) no-repeat -30px 0;
+        }
+
+        .pop-error .er-text {
+            white-space: nowrap;
+            text-align: center;
+            width: auto;
+            background: url(https://bbs.3dmgame.com/static/image/common/popuptext_bg.gif) no-repeat 50% -112px;
+        }
+
+        .pop-error .er-text > span {
+            margin-right: 10px;
+            font-size: 12px;
+            font-style: normal;
+            color: #FFF;
+            font-weight: 400;
+        }
+
+        .er-l, .er-c, .er-text, .er-r {
+            width: 29px;
+            height: 56px;
+            line-height: 56px;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="editor">
+        <form action="" method="post">
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon">标题</span>
+                    <input name="title" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon">板块</span>
+                    <select name="plate_id" class="form-control">
+                        <option value="">请选择板块</option>
+                        {% for plate in plates %}
+                            <option value="{{ plate.id }}">{{ plate.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <script id="container" name="content" type="text/plain"></script>
+            </div>
+            <div class="form-group">
+                <button id="submit" class="btn btn-danger">发表帖子</button>
+            </div>
+            <div class="pop-error">
+                <table>
+                    <tbody>
+                    <tr>
+                        <td class="er-l">&nbsp;</td>
+                        <td class="er-c">
+                            <div class="er-text"><span></span></div>
+                        </td>
+                        <td class="er-r">&nbsp;</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}

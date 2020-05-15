@@ -1,0 +1,95 @@
+{% from "common/macros.html" import static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {# CSS #}
+    <link rel="stylesheet" type="text/css" href="{{ static("cms/css/base.css") }}">
+    {# Font-icon css #}
+    <link rel="stylesheet" type="text/css"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    {# sweetalert css #}
+    <link rel="stylesheet" type="text/css" href="{{ static("common/css/sweetalert.css") }}">
+    {# Javascripts #}
+    <script src="{{ static("common/js/jquery-2.1.4.min.js") }}"></script>
+    <script src="{{ static("common/js/bootstrap.min.js") }}"></script>
+    <script src="{{ static("common/js/pace.min.js") }}"></script>
+    <script src="{{ static("cms/js/main.js") }}"></script>
+    <script src="{{ static("common/js/ajax.js") }}"></script>
+    <script src="{{ static("common/js/sweetalert/sweetalert.min.js") }}"></script>
+    <script src="{{ static("common/js/sweetalert/alert.js") }}"></script>
+    <script src="{{ static("cms/js/base.js") }}"></script>
+    {% block head %}
+    {% endblock %}
+    <title>论坛后台</title>
+</head>
+<body class="sidebar-mini fixed">
+<div class="wrapper">
+    <header class="main-header hidden-print"><a class="logo" href="{{ url_for("cms.index") }}">Dani</a>
+        <nav class="navbar navbar-static-top">
+        <a class="sidebar-toggle" href="#" data-toggle="offcanvas"></a>
+            <div class="navbar-custom-menu">
+                <ul class="top-nav">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">
+                            <i class="fa fa-user fa-lg"></i></a>
+                        <ul class="dropdown-menu settings-menu">
+                            <li><a href="{{ url_for("cms.logout") }}"><i class="fa fa-sign-out"></i>登出</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <aside class="main-sidebar hidden-print">
+        <section class="sidebar">
+            <div class="user-panel">
+                <div class="pull-left image"><img class="img-circle"
+                                                  src="http://q9xc69071.bkt.clouddn.com/o_1e7t80ok9itjt115r5f6b1po08.png"
+                                                  alt="User Image"></div>
+                <div class="pull-left info">
+                    <p>{{ g.cms_user.username }}</p>
+                    <p class="designation">{{ g.cms_user.role[0].name }}</p>
+                </div>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="active"><a href="{{ url_for("cms.index") }}"><i class="fa fa-home"></i><span>首页</span></a>
+                </li>
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-user"></i><span>个人中心</span><i class="fa fa-angle-right"></i></a>
+                    <ul class="treeview-menu">
+                        <li><a href="{{ url_for("cms.profile") }}"><i class="fa fa-circle-o"></i>个人信息</a></li>
+                        <li><a href="{{ url_for("cms.resetpwd") }}"><i class="fa fa-circle-o"></i>修改密码</a></li>
+                        <li><a href="{{ url_for("cms.resetemail") }}"><i class="fa fa-circle-o"></i>修改邮箱</a></li>
+                    </ul>
+                </li>
+                <li><a href="{{ url_for("cms.banners") }}"><i class="fa fa-picture-o"></i><span>轮播图管理</span></a></li>
+                <li><a href="{{ url_for("cms.post") }}"><i class="fa fa-pencil-square-o"></i><span>帖子管理</span></a></li>
+                <li><a href="{{ url_for("cms.comment") }}"><i class="fa fa-pencil"></i><span>评论管理</span></a></li>
+                <li><a href="{{ url_for("cms.plate") }}"><i class="fa fa-th-list"></i><span>板块管理</span></a></li>
+                <li><a href="{{ url_for("cms.webuser") }}"><i class="fa fa-users"></i><span>用户管理</span></a></li>
+                {% if g.cms_user.has_permission(CmsPermission.ALL_PERMISSION) %}
+                    <li><a href="{{ url_for("cms.cmsuser") }}"><i class="fa fa-users"></i><span>CMS用户管理</span></a></li>
+                    <li><a href="{{ url_for("cms.cmsgroup") }}"><i class="fa fa-users"></i><span>CMS组管理</span></a></li>
+                {% endif %}
+
+            </ul>
+        </section>
+    </aside>
+    <div class="content-wrapper">
+        <div class="page-title">
+            {% block page_title %}{% endblock %}
+        </div>
+        <div class="pag-content">
+            {% block page_content %}
+            {% endblock %}
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

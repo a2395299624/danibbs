@@ -1,0 +1,37 @@
+{% extends "cms/cms_base.html" %}
+{% block head %}
+    <script src="{{ static("cms/js/resetpwd.js") }}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ (static('cms/css/resetpwd.css')) }}">
+{% endblock %}
+
+{% block page_title %}
+    <div><h1><i class="fa fa-key"></i> 修改密码</h1></div>
+{% endblock %}
+
+{% block page_content %}
+    <form action="" method="post">
+        <div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon">旧密码</span>
+                    <input name="oldpwd" type="password" class="form-control" placeholder="请输入旧密码" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon">新密码</span>
+                    <input name="newpwd" type="password" class="form-control" placeholder="请输入新密码" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <span class="input-group-addon">确认密码</span>
+                    <input name="surepwd" type="password" class="form-control" placeholder="再次输入新密码" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <button id="submit" class="btn btn-info">确认提交</button>
+            </div>
+        </div>
+    </form>
+{% endblock %}

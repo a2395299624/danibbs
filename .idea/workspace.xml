@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f3e98e98-60b9-449f-9f6c-0e4fd62cf90a" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="BSS论坛" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Flask Main" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1afsFQA7tfmhNRMnGSkmAy8Vtjf" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\练习项目\BSS论坛\apps\ueditor" />
+      <recent name="F:\练习项目\BSS论坛\static\ueditor" />
+      <recent name="F:\练习项目\BSS论坛\apps\front" />
+      <recent name="F:\练习项目\BSS论坛\static\common\img" />
+      <recent name="F:\练习项目\BSS论坛\static\common\js\sweetalert" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\练习项目\BSS论坛" />
+      <recent name="F:\练习项目\BSS论坛\static\common\js" />
+      <recent name="F:\练习项目\BSS论坛\static\front\img" />
+      <recent name="F:\练习项目\BSS论坛\static\common\img" />
+      <recent name="F:\练习项目\BSS论坛\static\cms\js" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Flask server.Flask (bbs.py)">
+    <configuration name="test.html" type="JavascriptDebugType" nameIsGenerated="true" uri="http://localhost:63342/BSS论坛/templates/front/test.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="aliyunsdk" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="BSS论坛" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/aliyunsdk.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="safeurl" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="BSS论坛" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/safeurl.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tencentcloud" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="BSS论坛" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/tencentcloud.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="yprequest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="BSS论坛" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tools" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="F:\练习项目\BSS论坛\tools\yprequest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="BSS论坛" type="Python.FlaskServer">
+      <option name="flaskDebug" value="true" />
+      <module name="BSS论坛" />
+      <option name="target" value="$PROJECT_DIR$/bbs.py" />
+      <option name="targetType" value="PATH" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="F:\练习项目\BSS论坛\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Flask (bbs.py)" type="Python.FlaskServer" nameIsGenerated="true">
+      <option name="additionalOptions" value="--port=8000" />
+      <option name="flaskDebug" value="true" />
+      <module name="BSS论坛" />
+      <option name="target" value="$PROJECT_DIR$/bbs.py" />
+      <option name="targetType" value="PATH" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="F:\练习项目\BSS论坛\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Flask server.BSS论坛" />
+      <item itemvalue="Flask server.Flask (bbs.py)" />
+      <item itemvalue="JavaScript Debug.test.html" />
+      <item itemvalue="Python.aliyunsdk" />
+      <item itemvalue="Python.tencentcloud" />
+      <item itemvalue="Python.yprequest" />
+      <item itemvalue="Python.safeurl" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.safeurl" />
+        <item itemvalue="Python.yprequest" />
+        <item itemvalue="Python.tencentcloud" />
+        <item itemvalue="Python.aliyunsdk" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f3e98e98-60b9-449f-9f6c-0e4fd62cf90a" name="Default Changelist" comment="" />
+      <created>1587137878321</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1587137878321</updated>
+      <workItem from="1587137881680" duration="3528000" />
+      <workItem from="1587145565543" duration="1548000" />
+      <workItem from="1587147128259" duration="1013000" />
+      <workItem from="1587148153771" duration="790000" />
+      <workItem from="1587148956215" duration="945000" />
+      <workItem from="1587149915137" duration="12000" />
+      <workItem from="1587149969739" duration="166000" />
+      <workItem from="1587150186471" duration="5789000" />
+      <workItem from="1587155994062" duration="56000" />
+      <workItem from="1587156063097" duration="333000" />
+      <workItem from="1587156407637" duration="775000" />
+      <workItem from="1587157226693" duration="166000" />
+      <workItem from="1587196758700" duration="8876000" />
+      <workItem from="1587225030819" duration="14498000" />
+      <workItem from="1587239687183" duration="143000" />
+      <workItem from="1587289374239" duration="27111000" />
+      <workItem from="1587362713316" duration="55183000" />
+      <workItem from="1587460775220" duration="25327000" />
+      <workItem from="1587565792243" duration="13445000" />
+      <workItem from="1587629266883" duration="2458000" />
+      <workItem from="1587632782213" duration="79000" />
+      <workItem from="1587632873214" duration="124000" />
+      <workItem from="1587633030578" duration="10510000" />
+      <workItem from="1587643912055" duration="160000" />
+      <workItem from="1587644089532" duration="686000" />
+      <workItem from="1587644814175" duration="59000" />
+      <workItem from="1587644891268" duration="17003000" />
+      <workItem from="1587741862816" duration="443000" />
+      <workItem from="1587745394267" duration="13822000" />
+      <workItem from="1587833038190" duration="3237000" />
+      <workItem from="1587887400293" duration="28711000" />
+      <workItem from="1587973901558" duration="26598000" />
+      <workItem from="1588051037213" duration="13916000" />
+      <workItem from="1588085802514" duration="793000" />
+      <workItem from="1588093813747" duration="9193000" />
+      <workItem from="1588144405465" duration="15812000" />
+      <workItem from="1588164021557" duration="26341000" />
+      <workItem from="1588211131727" duration="20666000" />
+      <workItem from="1588238462875" duration="20977000" />
+      <workItem from="1588326771475" duration="8180000" />
+      <workItem from="1588345502187" duration="15694000" />
+      <workItem from="1588424011956" duration="27800000" />
+      <workItem from="1588483890643" duration="24911000" />
+      <workItem from="1588567619871" duration="28376000" />
+      <workItem from="1588620776061" duration="8552000" />
+      <workItem from="1588663804372" duration="10409000" />
+      <workItem from="1588695342147" duration="16560000" />
+      <workItem from="1588746489426" duration="29213000" />
+      <workItem from="1588791419323" duration="10004000" />
+      <workItem from="1588835099076" duration="18005000" />
+      <workItem from="1588879827760" duration="7659000" />
+      <workItem from="1588920776712" duration="23924000" />
+      <workItem from="1589011049263" duration="44383000" />
+      <workItem from="1589102181528" duration="21867000" />
+      <workItem from="1589182690610" duration="12798000" />
+      <workItem from="1589211046260" duration="19141000" />
+      <workItem from="1589256600189" duration="10693000" />
+      <workItem from="1589279663957" duration="29506000" />
+      <workItem from="1589358886127" duration="26185000" />
+      <workItem from="1589460028312" duration="3657000" />
+      <workItem from="1589485889531" duration="11731000" />
+      <workItem from="1589535068790" duration="16792000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="624" y="209" key="#HTTP_Proxy" timestamp="1587633175203">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="624" y="209" key="#HTTP_Proxy/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1587633175203" />
+    <state x="552" y="179" key="#Inspections" timestamp="1587227604706">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="179" key="#Inspections/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1587227604706" />
+    <state x="552" y="179" key="#Notifications" timestamp="1587565814951">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="179" key="#Notifications/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1587565814951" />
+    <state x="249" y="171" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589493929234">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="249" y="171" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1589493929234" />
+    <state x="683" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587156235086">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="683" y="323" key="#com.intellij.fileTypes.FileTypeChooser/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1587156235086" />
+    <state x="690" y="300" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper" timestamp="1587643598321">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="300" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1587643598321" />
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1588595480100">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1588595480100" />
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1587570232334">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1587570232334" />
+    <state x="506" y="268" width="440" height="493" key="FileChooserDialogImpl" timestamp="1589494042644">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="506" y="268" width="440" height="493" key="FileChooserDialogImpl/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1589494042644" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1589544157123">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1589544157123" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588344353688" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1589544157123">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1589544157123" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588344353688" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1589544157123">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1589544157122" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588344353688" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1589544157123">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1589544157123" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588344353688" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1589031591496">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1589031591496" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1589031591496">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1589031591496" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1589031591496">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1589031591496" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1589031591496">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1589031591496" />
+    <state width="1877" height="348" key="GridCell.Tab.2.bottom" timestamp="1589031591496">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.2.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1589031591496" />
+    <state width="1877" height="348" key="GridCell.Tab.2.center" timestamp="1589031591496">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.2.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1589031591496" />
+    <state width="1877" height="348" key="GridCell.Tab.2.left" timestamp="1589031591496">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.2.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1589031591496" />
+    <state width="1877" height="348" key="GridCell.Tab.2.right" timestamp="1589031591496">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.2.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1589031591496" />
+    <state x="385" y="176" key="SettingsEditor" timestamp="1589497125213">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="385" y="176" key="SettingsEditor/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1589497125213" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1587755972410">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1587755972410" />
+    <state x="429" y="110" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1587412607104">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="429" y="110" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1587412607104" />
+    <state x="636" y="119" width="786" height="801" key="find.popup" timestamp="1589378941725">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="636" y="119" width="786" height="801" key="find.popup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1589378941725" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1589541040785">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1589541040785" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/BSS$views__1_.coverage" NAME="views (1) Coverage Results" MODIFIED="1587144229984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/common" />
+    <SUITE FILE_PATH="coverage/BSS$decorators.coverage" NAME="decorators Coverage Results" MODIFIED="1587291055557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/cms" />
+    <SUITE FILE_PATH="coverage/BSS$Flask__bss_py_.coverage" NAME="Flask (bss.py) Coverage Results" MODIFIED="1587147139100" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/BSS$Flask__bbs_py_.coverage" NAME="Flask (bbs.py) Coverage Results" MODIFIED="1589536716122" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/BSS$manage.coverage" NAME="manage Coverage Results" MODIFIED="1587198921024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/BSS$models.coverage" NAME="models Coverage Results" MODIFIED="1587200111907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/cms" />
+    <SUITE FILE_PATH="coverage/BSS$config.coverage" NAME="config Coverage Results" MODIFIED="1587295381809" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/BSS$views.coverage" NAME="views Coverage Results" MODIFIED="1587227652150" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps/cms" />
+    <SUITE FILE_PATH="coverage/BSS$safeurl.coverage" NAME="safeurl Coverage Results" MODIFIED="1588356738864" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
+    <SUITE FILE_PATH="coverage/BSS$txrequest.coverage" NAME="txrequest Coverage Results" MODIFIED="1588215520849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
+    <SUITE FILE_PATH="coverage/BSS$tencentcloud.coverage" NAME="tencentcloud Coverage Results" MODIFIED="1588164173678" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
+    <SUITE FILE_PATH="coverage/BSS$Flask__bss_py___1_.coverage" NAME="Flask (bss.py) (1) Coverage Results" MODIFIED="1587144640226" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/BSS$aliyunsdk.coverage" NAME="aliyunsdk Coverage Results" MODIFIED="1588146605276" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
+  </component>
+</project>

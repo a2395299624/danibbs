@@ -1,0 +1,55 @@
+{% extends "cms/cms_base.html" %}
+{% block head %}
+    <script type="text/javascript" src="{{ static('common/js/shake.js') }}"></script>
+    <script type="text/javascript">
+        $(function () {
+            delete_btn({
+                btn: '.delete-comment-btn',
+                mes: '确定要删除这条评论吗',
+                url: "/cms/comment/"
+            })
+        })
+    </script>
+    <style type="text/css">
+        .card {
+            width: 1000px;
+        }
+
+        .table-bordered td button {
+            margin-left: 10px;
+        }
+    </style>
+{% endblock %}
+{% block page_title %}
+    <div><h1><i class="fa  fa-commenting-o"></i> 评论管理</h1></div>
+{% endblock %}
+
+{% block page_content %}
+    <div class="card">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>内容</th>
+                <th>评论时间</th>
+                <th style="width: 100px">帖子</th>
+                <th style="width: 100px">评论人</th>
+                <th style="width: 100px">操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for comment in comments %}
+                <tr data-id="{{ comment.id }}">
+                    <td title=""> {{ comment.content|safe }}</td>
+                    <td>{{ comment.create_time }}</td>
+                    <td> {{ comment.post.title }}</td>
+                    <td> {{ comment.author.username }}</td>
+                    <td>
+                        <button class="btn btn-danger btn-xs delete-comment-btn">删除</button>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <div class="pag"> {{ pagination.links }}</div>
+    </div>
+{% endblock %}

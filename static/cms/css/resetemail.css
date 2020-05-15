@@ -1,0 +1,70 @@
+.input-group {
+    width: 400px;
+}
+
+.form-control:focus {
+    border: 2px solid #298fc2;
+}
+
+.form-control {
+    height: 45px;
+}
+
+.form-group {
+    height: 45px;
+}
+
+.error {
+    display: inline-block;
+    position: relative;
+    height: 40px;
+    left: 420px;
+    top: -43px;
+}
+
+
+.error strong {
+    position: relative;
+    top: -12px;
+    font-size: 20px;
+
+}
+
+.fa-exclamation-triangle {
+    position: relative;
+    top: -10px;
+    left: -5px;
+}
+
+.sweet-alert p {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.input-group .form-control:first-child, .input-group-addon:last-child {
+    border-radius: 7px;
+}
+
+
+.input-group-addon:last-child:hover {
+    border: 1px solid #0e8df2;
+    color: #0e8df2;
+}
+
+.input-group-addon:last-child {
+    display: block;
+    float: right;
+    border: 1px solid #ccc;
+    width: 101px;
+    height: 45px;
+    margin-top: 0px;
+    margin-right: -10px;
+    line-height: 2;
+    letter-spacing: 0px;
+    cursor: pointer;
+}
+
+.sweet-alert {
+    margin-top: -210px;
+    margin-left: -220px;
+}

@@ -1,0 +1,138 @@
+{% extends "cms/cms_base.html" %}
+{% block head %}
+    <script src="{{ static("common/js/qiniu-JS-SDK_1.0.24.js") }}"></script>
+    <script src="{{ static('common/js/shake.js') }}"></script>
+    <script src="{{ static("cms/js/banner.js") }}"></script>
+    <script src="{{ static("common/js/dnqiniu.js") }}"></script>
+    <style type="text/css">
+        .btn-info:focus {
+            background-color: #2196F3;
+        }
+
+        .btn-info:hover {
+            background-color: #0e8df2;
+        }
+
+        .card {
+            width: 1070px;
+        }
+
+        .table-bordered > thead > tr > th:nth-child(1) {
+            width: 105px
+        }
+
+        .table-bordered > thead > tr > th:nth-child(2) {
+            width: 200px
+        }
+
+        .table-bordered > thead > tr > th:nth-child(4) {
+            width: 80px
+        }
+
+        .table-bordered > thead > tr > th:nth-child(5) {
+            width: 105px
+        }
+
+        .table-bordered > tbody > tr > td > a > img {
+            height: 40px;
+            width: 110px;
+        }
+
+        .table-bordered > tbody > tr > td > a {
+            color: #004a43;
+
+        }
+
+        .table-bordered > tbody > tr > td > a:hover {
+            color: #2196F3;
+        }
+
+        .table-bordered > tbody > tr > td > .btn-default {
+            margin-right: 10px;
+        }
+    </style>
+{% endblock %}
+{% block page_title %}
+    <div><h1><i class="fa fa-picture-o"></i> 轮播图</h1></div>
+{% endblock %}
+
+{% block page_content %}
+
+    <div class="card">
+        <div class="add-banner">
+            <button class="btn btn-primary" data-toggle="modal" data-target="#banner-modal">
+                <i class="fa fa-plus"></i>添加轮播图
+            </button>
+        </div>
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>名称</th>
+                <th>图片</th>
+                <th>跳转链接</th>
+                <th>优先级</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for banner in banners %}
+                <tr data-name="{{ banner.name }}" data-image="{{ banner.image }}" data-url="{{ banner.url }}"
+                    data-priority="{{ banner.priority }}" data-id="{{ banner.id }}">
+                    <td>{{ banner.name }}</td>
+                    <td><a target="_blank" href="{{ banner.image }}"><img src="{{ banner.image }}" alt=""></a></td>
+                    <td><a target="_blank" href="{{ banner.url }}">{{ banner.url }}</a></td>
+                    <td>{{ banner.priority }}</td>
+                    <td>
+                        <button class="btn btn-default btn-xs edit-banner-btn">修改</button>
+                        <button class="btn btn-danger btn-xs delete-banner-btn">删除</button>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="banner-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel"></h4>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">名称:</label>
+                            <div class="col-sm-10"><input name="name" type="text" class="form-control"></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">图片:</label>
+                            <div class="col-sm-8"><input name="image" type="text" class="form-control"></div>
+                            <button id="upload-btn" type="button" class="btn btn-info col-sm-2">上传图片</button>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">链接:</label>
+                            <div class="col-sm-10"><input name="url" type="text" class="form-control" property=""></div>
+                        </div>
+                        <div class="form-group">
+                            <label style="padding-right: 0" class="col-sm-2 control-label">优先级:</label>
+                            <div class="col-sm-10">
+                                <input name="priority" type="number" class="form-control">
+                            </div>
+                        </div>
+                    </form>
+                    <div class="alert alert-danger alert-dismissible error_message" role="alert">
+                        <button type="button" class="close">
+                            <span aria-hidden="true">&times;</span></button>
+                        <strong>错误!</strong> 请填写正确数据
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button id="submit" type="button" class="btn btn-primary" data-dismiss="alert">添加</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,116 @@
+{% from "common/macros.html" import static %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>达尼论坛CMS管理系统</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static',filename='cms/css/signin.css') }}" rel="stylesheet">
+
+    <style>
+        .message {
+            display: block;
+            width: 240px;
+            height: 36px;
+            margin: auto;
+        }
+
+        .message strong {
+            position: relative;
+            left: 280px;
+            top: -180px;
+            border: none;
+            padding: 10px;
+        }
+
+        .tooltip-inner {
+            background-color: #4b88a6;
+            max-width: 500px;
+            padding: 6px 16px;
+        }
+
+        .tooltip.top .tooltip-arrow {
+            border-top-color: #4b88a6;
+            border-width: 20px 20px 0;
+            margin-bottom: -13px;
+            margin-left: -22px;
+        }
+
+        .tooltip.top {
+            font-size: 30px;
+        }
+
+        #logout {
+            position: absolute;
+            top: 8%;
+            left: 50%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+    <form class="form-signin" method="post">
+        <h2 class="form-signin-heading">登录</h2>
+        <label for="inputEmail" class="sr-only ">邮箱</label>
+        <input name="email" type="email" id="inputEmail" class="form-control " placeholder="邮箱" required autofocus>
+        <label for="inputPassword" class="sr-only">密码</label>
+        <input name="password" type="password" id="inputPassword" class="form-control" placeholder="密码" required>
+        <div class="checkbox">
+            <label>
+                <input name="remember" type="checkbox" value="true"> 记住我
+            </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
+        {# CSRF input标签 #}
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    </form>
+</div>
+
+<script src="{{ static("common/js/jquery-2.1.4.min.js") }}"></script>
+<script src="{{ static("common/js/bootstrap.min.js") }}"></script>
+
+{% with message=get_flashed_messages(category_filter=("login")) %}
+    {% if message %}
+        <div class="message">
+            <strong class="alert alert-danger ">
+                <i class="glyphicon glyphicon-remove"></i>
+                {{ message|first }}
+            </strong>
+        </div>
+    {% endif %}
+{% endwith %}
+
+{% with message=get_flashed_messages(category_filter=("logout")) %}
+    {% if message %}
+        <span id="logout"></span>
+        <script>
+            function showPopover(target, msg) {
+                target.attr("data-original-title", msg);
+                target.tooltip("show");
+                {#2秒后消失提示框#}
+                setTimeout(
+                    function () {
+                        target.attr("data-original-title", "");
+                        target.tooltip('hide');
+                    }, 2000
+                );
+            }
+            showPopover($("#logout"), "{{ message|first }}");
+        </script>
+    {% endif %}
+{% endwith %}
+</body>
+</html>
