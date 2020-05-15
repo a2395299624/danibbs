@@ -79,15 +79,5 @@ def test():
     db.session.commit()
 
 
-# user = CmsUser.query.filter_by(email='root@qq.com').first()
-# user.password = '123'
-# db.session.commit()
-# print(user.role[0].name)
-# if user.has_permission(CmsPermission.CMS_USER_PERMISSION):
-#     print("有")
-# else:
-#     print("没有")
-
-
 if __name__ == "__main__":
     manager.run()
